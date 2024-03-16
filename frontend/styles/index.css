@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "Rubik", sans-serif;
+}
+
+a,
+li {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.header {
+    height: 100vh;
+    position: relative;
+    background-image: linear-gradient(rgba(34, 34, 34, 0.6),
+            rgba(34, 34, 34, 0.6)),
+        url(/assets/hero.jpg);
+    background-size: cover;
+}
+
+.navbar {
+    height: 100px;
+    padding: 0 80px;
+}
+
+.navbar-collapse {
+    animation: none;
+}
+
+.logo {
+    height: 32px;
+    cursor: pointer;
+}
+
+.nav-list {
+    list-style: none;
+    align-items: center;
+    gap: 80px;
+    margin: 0;
+}
+
+.nav-link:link,
+.nav-link:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+.nav-link:hover,
+.nav-link:active {
+    color: #cf711f;
+}
+
+.nav-login:link,
+.nav-login:visited {
+    padding: 12px 52px;
+    border-radius: 9px;
+    color: #fff;
+    background-color: #e67e22;
+}
+
+.nav-login:hover,
+.nav-login:active {
+    background-color: #cf711f;
+}
+
+.nav-login-secondary {
+    padding: 12px 52px;
+    border-radius: 9px;
+    background-color: none;
+    border: 2px solid #e67e22;
+}
+
+.toggler {
+    cursor: pointer;
+    scale: 1.5;
+    display: none;
+}
+
+.toggler-header {
+    text-align: left;
+    width: 100%;
+    padding: 0 32px 32px 32px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+}
+
+.toggler-links {
+    margin: 0;
+    padding: 0;
+}
+
+.toggler-links li {
+    padding: 16px;
+}
+
+.toggler-links li:hover {
+    background-color: rgba(197, 197, 197, 0.178);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.toggler-header li:last-child a {
+    border-radius: 24px;
+    padding: 12px 32px;
+}
+
+.toggler-header li:not(:last-child) a {
+    color: #333;
+    padding: 12px 16px;
+}
+
+.hero-container {
+    width: 1200px;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-container-inner {
+    flex-direction: column;
+    width: 50%;
+}
+
+.hero-container-inner h1 {
+    font-size: 52px;
+    margin-bottom: 16px;
+    line-height: 1.05;
+}
+
+.hero-container-inner p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+.hero .btn {
+    max-width: 40%;
+}
+
+
+.explore {
+    padding: 96px 0;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.explore-container-text {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.explore h2 {
+    font-size: 44px;
+    margin: 0;
+}
+
+.explore p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.explore a {
+    text-decoration: none;
+}
+
+.explore-container-search {
+    gap: 16px;
+    width: 60%;
+}
+
+.explore-inner-container-search {
+    width: 100%;
+}
+
+.explore-search {
+    width: 80%;
+}
+
+.explore-search input {
+    width: 100%;
+    border: 1px solid #c9c9c9;
+    border-radius: 12px;
+    padding: 0 12px;
+}
+
+.explore-filter-toggler-links {
+    display: flex;
+    width: 80%;
+}
+
+.explore-filter-toggler-links p {
+    font-size: 16px;
+    max-width: 30%;
+}
+
+.filter-links {
+    gap: 16px;
+    margin: 0;
+    padding-left: 16px;
+}
+
+.filter-link:hover {
+    cursor: pointer;
+    color: #e67e22;
+}
+
+.toggled {
+    color: #e67e22;
+}
+
+.explore-filter {
+    gap: 8px;
+}
+
+.explore-filter-fav {
+    margin-left: 32px;
+}
+
+.filter-toggle:hover,
+.fa-star:hover:hover,
+.fa-square-minus:hover,
+.fa-plus:hover {
+    cursor: pointer;
+    color: #e67e22;
+}
+
+
+.cards-grid {
+    max-width: 1400px;
+    margin: 32px auto;
+}
+
+.cards {
+    width: 100%;
+    min-height: 50vh;
+    gap: 32px
+}
+
+.card {
+    max-width: 400px;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    cursor: pointer;
+    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
+    transform: translatey(-1%);
+}
+
+.card-footer {
+    background-color: unset;
+}
+
+.card img {
+    max-width: 100%;
+}
+
+.card p {
+    font-size: 20px;
+    padding: 12px;
+    margin: 0;
+}
+
+.card-text:hover {
+    color: #e67e22;
+}
+
+.card-footer {
+    gap: 8px;
+}
+
+.cards-not-found {
+    height: 50vh;
+    text-align: center;
+}
+
+.cards-not-found h2 {
+    font-weight: 400;
+}
+
+footer {
+    max-width: 100%;
+    padding: 0 32px;
+}
+
+footer a:hover {
+    cursor: pointer;
+    color: #e67e22 !important;
+}
+
+.nav-link a {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.empty-col-2 {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
