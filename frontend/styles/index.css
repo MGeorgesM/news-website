@@ -23,7 +23,7 @@ ul {
     position: relative;
     background-image: linear-gradient(rgba(34, 34, 34, 0.6),
             rgba(34, 34, 34, 0.6)),
-        url(/assets/hero.jpg);
+        url(/frontend/assets/hero.jpg);
     background-size: cover;
 }
 
@@ -60,7 +60,7 @@ ul {
 
 .nav-link:hover,
 .nav-link:active {
-    color: #cf711f;
+    color: #339af0;
 }
 
 .nav-login:link,
@@ -68,19 +68,19 @@ ul {
     padding: 12px 52px;
     border-radius: 9px;
     color: #fff;
-    background-color: #e67e22;
+    background-color: #339af0;
 }
 
 .nav-login:hover,
 .nav-login:active {
-    background-color: #cf711f;
+    background-color: #339af0;
 }
 
 .nav-login-secondary {
     padding: 12px 52px;
     border-radius: 9px;
     background-color: none;
-    border: 2px solid #e67e22;
+    border: 2px solid #339af0;
 }
 
 .toggler {
@@ -218,11 +218,11 @@ ul {
 
 .filter-link:hover {
     cursor: pointer;
-    color: #e67e22;
+    color: #339af0;
 }
 
 .toggled {
-    color: #e67e22;
+    color: #339af0;
 }
 
 .explore-filter {
@@ -238,7 +238,7 @@ ul {
 .fa-square-minus:hover,
 .fa-plus:hover {
     cursor: pointer;
-    color: #e67e22;
+    color: #339af0;
 }
 
 
@@ -261,7 +261,6 @@ ul {
 }
 
 .card:hover {
-    cursor: pointer;
     box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
     transform: translatey(-1%);
 }
@@ -270,28 +269,19 @@ ul {
     background-color: unset;
 }
 
-.card img {
-    max-width: 100%;
-}
 
 .card p {
     font-size: 20px;
     padding: 12px;
-    margin: 0;
+    width: 100%;
 }
 
-.card-text:hover {
-    color: #e67e22;
+.card-text {
+    color: #696969;
 }
 
-.card-footer {
-    gap: 8px;
-}
 
-.cards-not-found {
-    height: 50vh;
-    text-align: center;
-}
+
 
 .cards-not-found h2 {
     font-weight: 400;
@@ -304,7 +294,7 @@ footer {
 
 footer a:hover {
     cursor: pointer;
-    color: #e67e22 !important;
+    color: #339af0 !important;
 }
 
 .nav-link a {

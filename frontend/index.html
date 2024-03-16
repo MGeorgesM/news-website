@@ -21,82 +21,40 @@
     <header class="header">
         <section class="navbar flex space-between off-white-bg">
             <a href="#">
-                <img class="logo" alt="logo" src="/frontend/assets/logo.png" />
+                <img class="logo" alt="logo" src="/frontend/assets/logo.png" href="/frontend/index.html" />
             </a>
             <nav class="main-nav">
                 <ul class="nav-list flex center">
-                    <li><a id="scroll-btn" class="nav-link" href="#">Restaurants</a></li>
-                    <li><a id="nav-link-profile" class="nav-link" href="#">Profile</a></li>
-                    <li><a id="login-btn" class="nav-link nav-login" href="/frontend/pages/sign-in.html">Sign In</a></li>
+                    <li><a id="login-btn" class="nav-link nav-login" href="/frontend/pages/addarticle.html">Add Your News</a></li>
                 </ul>
             </nav>
-            <div class="toggler white-text">
-                <i class="toggler-open fa-solid fa-bars"></i>
-            </div>
-            <div class="toggler-header hidden off-white-bg" id="toggler-header">
-                <ul class="toggler-links">
-                    <li><a class="toggler-link">Restaurants</a></li>
-                    <li><a id="nav-link-profile-collapsed" class="toggler-link">Profile</a></li>
-                    <li><a id="login-btn-collapsed" class="toggler-link off-white-text primary-bg" href="/frontend/pages/sign-in.html">Sign In</a></li>
-                </ul>
-            </div>
         </section>
         <section class="hero">
             <div class="hero-container flex">
                 <div class="hero-container-inner flex off-white-text">
-                    <h1>Discover, savor and navigate local culinary delights</h1>
+                    <h1>One step away from sharing your news with the world!</h1>
                     <p>
-                        Embark on a culinary journey, your ultimate restaurants guide in the area. Discover diverse
-                        flavors,
-                        cozy atmospheres, and hidden gems
-                        with ease
+                        AllNews is the perfect platform to share your news with the world. Whether you're a
+                        professional journalist or an amateur blogger, OnlyNews is the perfect platform to share Freely!
                     </p>
-                    <a href="#" class="btn" id="book-now-btn">Book now</a>
+                    <a href="/frontend/pages/addarticle.html" class="btn" id="book-now-btn">Tell us more</a>
                 </div>
             </div>
         </section>
     </header>
     <main>
-        <section class="explore flex center light-gray-bg" id="scroll-target">
-            <div class="explore-container-text">
-                <h2>Fine dining options next to you</h2>
-                <p>
-                    From cozy cafes to fine dining experiences, our curated selection ensures there's something for
-                    every palate. Plan your dining adventures effortlessly and embark on a journey of gastronomic
-                    delight
-                </p>
-            </div>
-            <div class="explore-container-search flex column center">
-                <div class="explore-container-search flex center">
-                    <div class="explore-admin">
-                        <i class="hidden fa-solid fa-plus" id="add-restaurant"></i>
-                    </div>
-                    <div class="explore-search">
-                        <input type="text" placeholder="Search..." id="search">
-                    </div>
-                    <div class="explore-filter flex center">
-                        <a class="dark-gray-text">Filter</a>
-                        <i class="filter-toggle fa-solid fa-bars" id="toggle-filters"></i>
-                    </div>
-                </div>
-                <div class="explore-filter-toggler-links hidden center" id="filter-toggler-links">
-                    <p>Location: </p>
-                    <ul class="filter-links flex center" id="filter-links"></ul>
-                    <div class="explore-filter-fav" id="fav-filter-container"></div>
-                </div>
-            </div>
-
-        </section>
         <section class="cards-grid">
-            <div class="cards flex center wrap" id="cards-container"></div>
+            <div class="cards flex center wrap" id="cards-container">
+                
+            </div>
             </div>
         </section>
         <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
             <div class="empty-col col mb-3"></div>
             <div class="col mb-3">
                 <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-                    <img class="logo" alt="logo" src="/assets/logo.png" /> </a>
-                <p class="text-body-secondary">OnlyNews © 2024</p>
+                    <img class="logo" alt="logo" src="/frontend/assets/logo.png" /> </a>
+                <p class="text-body-secondary">AllNews © 2024</p>
             </div>
 
             <div class="empty-col-2"></div>
@@ -105,7 +63,7 @@
             <div class="col mb-3">
                 <h5>Contact us</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a>hello@OnlyNews.com</a>
+                    <li class="nav-item mb-2"><a>hello@AllNews.com</a>
                     </li>
                     <li class="nav-item mb-2"><a>Horsh Tabet</a></li>
                     <li class="nav-item mb-2"><a>+961 33444777</a>
@@ -142,6 +100,8 @@
         </footer>
     </main>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/frontend/scripts/news.js"></script>
     <script src="/frontend/scripts/script.js"></script>
 </body>
 

@@ -1,28 +1,62 @@
-const cardsContainer = document.getElementById('cards-container');
+const addArticleBtn = $('#addnews-btn');
+const articleForm = $('#addnews-form');
 
-const populateRestaurantCard = (restaurant) => {
-    let favoriteIconClass = 'fa-regular';
-    if (currentUser) {
-      isFavorite = currentUser.favoriteRestaurants.includes(restaurant.name);
-      favoriteIconClass = isFavorite ? 'fa-solid' : 'fa-regular';
-    }
-  
-    cardsContainer.innerHTML += `<div class="card flex center box-shadow off-white-bg">
-                                  <img src="/assets/card-img.jpg" alt="restaurant-img">
-                                  <div class="card-footer flex center space-between">
-                                      <p class="card-text">${restaurant.name} - ${restaurant.location}</p>
-                                      <i class="remove-restaurant fa-regular hidden fa-square-minus"></i>
-                                      <i class="add-to-favorites ${favoriteIconClass} fa-star"></i>
-                                  </div>
-                                  </div>`;
-  };
-  
-  const populateRestaurantsCards = (restaurants) => {
-    cardsContainer.innerHTML = '';
-    for (let i = 0; i < restaurants.length; i++) {
-      populateRestaurantCard(restaurants[i]);
-    }
-    restaurantsCardsText = document.querySelectorAll('.card-text');
-    addToFavoritesBtns = document.querySelectorAll('.add-to-favorites');
-    adminDeleteBtns = document.querySelectorAll('.remove-restaurant');
-  };
+const cardsContainer = $('#cards-container');
+
+axios.defaults.baseURL = 'http://localhost/news-website/backend';
+
+const getArticles = async () => {
+  try {
+    const response = await axios.get('/getnews.php');
+    return response.data.news;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+const addArticle = async (headline, text, author) => {
+  const data = new FormData();
+  data.append('headline', headline);
+  data.append('text', text);
+  data.append('author', author);
+
+  try {
+    await axios.post('/addnews.php', data);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+$('#addnews-btn').click(function (event) {
+  event.preventDefault();
+
+  var headline = $('#headline').val();
+  var newsText = $('#articleText').val();
+  var author = $('#author').val();
+
+  addArticle(headline, newsText, author);
+
+  window.location.href = '/frontend/index.html';
+});
+
+const populateArticleCard = (article) => {
+  return `<div class="card flex center box-shadow off-white-bg">
+            <p>${article.headline}</p>
+            <p class="card-text">${article.text}</p>
+            <p>${article.author}</p>
+        </div>`;
+};
+
+const populateArticleCards = (articles) => {
+  cardsContainer.empty();
+  $.each(articles, (index, article) => {
+    cardsContainer.append(populateArticleCard(article));
+  });
+};
+
+getArticles().then((articles) => {
+  if (articles.length > 0) {
+    console.log(articles);
+    populateArticleCards(articles);
+  }
+});

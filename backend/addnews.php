@@ -17,4 +17,6 @@ $add_news->bind_param('ssss', $news_headline, $news_text, $news_date, $news_auth
 $add_news->execute();
 $add_news->close();
 
+$response['status'] = 1;
 $response['success'] = 'News added';
+echo json_encode($response);
