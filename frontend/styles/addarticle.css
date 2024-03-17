@@ -38,6 +38,19 @@ body {
     max-height: 40px;
 }
 
+.text-area {
+    margin-bottom: 8px;
+    width: 100%;
+    
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #e9ecef;
+    padding: 8px;
+}
+
 .login-form {
     width: 80%;
 }

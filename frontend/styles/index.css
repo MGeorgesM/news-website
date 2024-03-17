@@ -255,9 +255,33 @@ ul {
 
 .card {
     max-width: 400px;
-    height: 100%;
+    min-width: 400px;
+    height: 400px;
     flex-direction: column;
     justify-content: space-between;
+    gap:16px;
+    padding: 24px;
+    
+}
+
+.card p {
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.card p:nth-child(2) {
+    height: 65%;
+}
+
+.card p:first-child {
+    height: 25%;
+    margin: 0;
+}
+
+.card p:last-child {
+    height: 10%;
+    font-size: 16px;
 }
 
 .card:hover {
@@ -270,11 +294,7 @@ ul {
 }
 
 
-.card p {
-    font-size: 20px;
-    padding: 12px;
-    width: 100%;
-}
+
 
 .card-text {
     color: #696969;

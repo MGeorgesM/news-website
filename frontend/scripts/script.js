@@ -43,7 +43,7 @@ const populateArticleCard = (article) => {
   return `<div class="card flex center box-shadow off-white-bg">
             <p>${article.headline}</p>
             <p class="card-text">${article.text}</p>
-            <p>${article.author}</p>
+            <p>${article.author} - ${article.date}</p>
         </div>`;
 };
 
